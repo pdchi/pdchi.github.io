@@ -1,0 +1,52 @@
+% Cover letter using letter.sty
+\documentclass[11pt]{letter} % Uses 10pt
+%Use \documentstyle[newcent]{letter} for New Century Schoolbook postscript font
+% the following commands control the margins:
+
+\nofiles
+
+\topmargin=-1.25in    % Make letterhead start about 1 inch from top of page 
+\textheight=9in  % text height can be bigger for a longer letter
+\oddsidemargin=0pt % leftmargin is 1 inch
+\textwidth=6.5in   % textwidth of 6.5in leaves 1 inch for right margin
+
+\begin{document}
+
+\signature{Steven Boada}           % name for signature 
+\longindentation=0pt               % needed to get closing flush left
+\let\raggedleft\raggedright        % needed to get date flush left
+ 
+\begin{letter}{Nancy DeHaan\\
+Rutgers University \\
+Department of Physics and Astronomy \\
+136 Frelinghuysen Road \\
+Piscataway, NJ 08854}
+
+\begin{flushleft}
+{\huge\bf Steven Boada}
+\end{flushleft}
+\medskip\hrule height 1pt
+\begin{flushright}
+\hfill Department of Physics and Astronomy, 4242 TAMU \\
+\hfill Texas A\&M University, College Station, Texas 77843-4242 
+\end{flushright} 
+\vfill % forces letterhead to top of page
+
+\opening{Nancy DeHaan:} 
+ 
+\noindent Please find the enclosed application for the position of postdoctoral research fellow as advertised on the AAS Job Register, 	
+Postdoctoral Position in Galaxy Cluster Research - JRID52807. I expect to complete my Ph.D. at Texas A\&M University as of May, 2016 under the supervision of Dr. Casey Papovich. 
+
+\noindent My current research is focused on using large datasets to study galaxy clusters and their application as cosmological probes. I am conducting detailed simulations of the upcoming Hobby Eberly Telescope Dark Energy Experiment (HETDEX) and the VIRUS instrument's ability to obtain accurate cluster mass estimates. I have also undertaken targeted observations of optically selected clusters with the VIRUS prototype instrument on the 2.7m telescope at McDonald Observatory. Taken together, this will allow me to provide probabilistic mass estimates for future blind spectroscopic surveys such as HETDEX.
+
+\noindent I am excited about the opportunity to continue my research at Rutgers University, and I believe my background in galaxy cluster dynamics, cosmology, and large datasets will compliment your groups' ongoing work. I am particularly excited to work with Dr. Hughes and to be involved in the follow-up of ACT clusters.
+
+\noindent If you have any questions or would like to discuss my application further please do not hesitate to contact me at boada@physics.tamu.edu or by phone at +1 615 200 0119. I plan on attending the Winter AAS meeting, and would be more than happy to introduce myself in person. Thank you very much for your time and consideration. I look forward to hearing from you soon.
+ 
+\closing{Sincerely,} 
+ 
+
+ 
+%\encl{CV, Publications, Past, Present, and Future Research Interests} % Enclosures
+\end{letter}
+\end{document}

@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "restricted area"
+AuthUserFile /home/users/bforrest/public_html/GLASS/ApplicationResources/.htpasswd
+require valid-user

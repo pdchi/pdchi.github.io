@@ -1,0 +1,40 @@
+3 : data
+4 : data[0]
+5 : data[:,0]
+6 : data[:,1]
+7 : pl.plot( data[:,0] , data[:,1] )
+8 : x = data[:,0]
+9 : y = data[:,1]
+10: pl.plot( x, y )
+11: pl.xlabel("x axis")
+12: pl.ylabel("y axis")
+13: pl.ylim( 0, 10000 )
+14: pl.axis( [ 1000, 1500, 100, 6000 ] )
+15: pl.yscale( "log" )
+16: pl.yscale( "linear" )
+17: data
+18: len(data)
+19: data[ 1000:1100 ]
+20: data2 = data[ 1000:1100 ]
+21: pl.plot( x, y )
+22: x2 = data2[:,0]
+23: y2 = data2[:,1]
+24: pl.scatter( x2, y2 )
+25: pl.scatter( x2, y2+20 )
+26: plt = pl.scatter( x2, y2+30 )
+27: plt
+28: plt.remove()
+29: pl.draw()
+30: data
+31: pl.fill_between( x, y )
+32: pl.fill_between( x, y, alpha=0.9 )
+33: pl.fill_between( x, y, alpha=0.1 )
+34: pl.fill_between( x, y, alpha=0.1, color='r' )
+35: pl.fill_between( x, y, alpha=0.1, color='g' )
+36: pl.fill_between( x, y, alpha=0.1, color='g' )
+37: pl.fill_between( x, y, alpha=0.1, color='salmon' )
+38: pl.fill_between( x, y, alpha=0.1, color='salmon' )
+39: pl.fill_between( x, y, alpha=1.0, color='salmon' )
+40: pl.grid()
+41: _ip.system("ls -F ")
+42: _ip.magic("history ")

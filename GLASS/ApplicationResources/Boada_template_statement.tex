@@ -1,0 +1,148 @@
+\documentclass[overlapped, line, 11pt]{res}
+\usepackage{natbib}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage[colorlinks,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{wrapfig}
+\usepackage{epsf}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\textwidth=6.5in
+% if using pdflatex:
+\setlength{\pdfpagewidth}{\paperwidth}
+\setlength{\pdfpageheight}{\paperheight} 
+
+\bibliographystyle{apj}
+\citestyle{aa}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\renewcommand{\footrulewidth}{0.0pt}
+\renewcommand{\headrulewidth}{0.0pt}
+\fancyfoot[L]{\textbf{Steven Boada}}
+\fancyfoot[R]{\thepage}
+
+\newcommand{\Msol}{\hbox{$\mathrm{M}_\odot$}}
+\newcommand{\degsq}{\hbox{degree$^2$}}
+\newcommand{\etal}{et al.}
+\newcommand{\eg}{e.g.}
+\newcommand{\citeeg}[1]{(\eg, \citealt{#1})}
+\newcommand{\editorial}[1]{\textcolor{red}{#1}}
+\DeclareRobustCommand{\ion}[2]{%
+\relax\ifmmode
+\ifx\testbx\f@series
+{\mathbf{#1\,\mathsc{#2}}}\else
+{\mathrm{#1\,\mathsc{#2}}}\fi
+\else\textup{#1\,{\mdseries\textsc{#2}}}%
+\fi}
+
+\setlength\parindent{24pt}
+%\setlength\multicolsep{-\baselineskip}
+
+\begin{document}
+\name{Steven Boada \vspace*{.1in}}
+
+\begin{resume}
+\noindent Publicly available large-area sky surveys, such as the Sloan Digital Sky Survey (SDSS), have opened new avenues for astronomers to conduct research, and continue to create opportunities to answer questions which previously would have been either time or cost prohibitive using traditional ground- and space-based observations. Ongoing and upcoming surveys, such as the Dark Energy Survey (DES) and the Large Synoptic Survey Telescope (LSST), will continue to revolutionize the field by generating substantially more data than any previous survey. With such large datasets, the intersection between astrophysics and the data sciences may provide key insights in the future.
+
+However, data science alone will not answer all of the outstanding astrophysical questions. An understanding of the observational methods used, astrophysical biases implied, and other factors is also required. My experiences in both computing at the supercomputing division of Oak Ridge National Laboratory, and observations working with ground- and space-based, optical/IR imaging, and optical integral field spectroscopy give me a unique understanding of both worlds. My research interests have been heavily influenced by these experiences and currently focuses on utilizing large-area sky surveys, machine learning and data mining techniques to answer astrophysical questions. While I am interested in many topics, at present, my research focuses on using large, ground-based, optical surveys to study galaxy clusters in a cosmological context. Below, I describe my current and previous research and give small introductions to three projects relating to galaxy clusters where data mining, machine learning, and ever-expanding datasets could make significant contributions.
+
+\begin{wrapfigure}[21]{r}{0.45\textwidth}
+	\vspace*{-1.6cm}
+	\centering
+	\includegraphics[clip=true, width=0.45\textwidth]{figures/massmass.eps}
+	\vspace*{-0.75cm}
+	\caption{Tests to recover total cluster masses using mock galaxy samples. The plot shows the “true” halo mass ($M_{200,True}$) from the mock catalog against the dynamical mass recovered ($M_{200,Rec}$). The red line shows the 1:1 relation. The results are in good agreement at the high-mass end. At lower masses the scatter increases as there are fewer galaxies per cluster, and the clusters are less dynamically ``relaxed''.}
+	\label{fig:massmass}
+\end{wrapfigure}
+
+\section{\sc Present and Past Research}
+\noindent \textbf{HETDEX as a Galaxy Cluster Survey:} The Hobby Eberly Telescope Dark Energy eXperiment (HETDEX; \citealt{Hill2008}) is a trailblazing effort to observe high-$z$ large scale structures using a collection of wide-field integral field unit (IFU) spectrographs, VIRUS \citep{Hill2012}. HETDEX's primary goal is to probe the evolution of the dark energy equation of state etched onto $z>2$ galaxy populations. Over 420 \degsq, HETDEX expects to find 800,000 \lya\ emitters, and more than $10^6$ [\ion{O}{ii}] emitting galaxies at $z<0.5$ masquerading as high-$z$ galaxies \citep{Acquaviva2014}. It is this low-$z$ sample that I find most interesting as it may contain up to 100 clusters with masses $\sim10^{15}$ \msol.
+
+This low-$z$ cluster sample is important because while we are discovering many tens of thousands of clusters with large-area sky surveys, the principal challenge to modern precision cosmology is not in the number of clusters detected, but the accurate recovery of the galaxy cluster mass \citeeg{Sehgal2011,Plank2014, Bocquet2015}. This study aims to investigate how well HETDEX-like observations are able to recover galaxy cluster masses over a wide range of masses and redshifts. To do this, I use two versions of mock galaxy observations to estimate the number of clusters observed and the accuracy with which cluster masses can be recovered with HETDEX. In addition to simulating the planned HETDEX observing strategy, I am simulating how targeted followup observations can improve the mass estimates. Using both observing methods, I produce cluster mass probability functions, $P(M_{True}|M_{Rec},z)$ by comparing the recovered mass to the true mass; see Figure~\ref{fig:massmass}.  I am currently applying this methodology to real data as described below and this work will form the basis for cluster studies when HETDEX begins operation in 2016.
+
+As a followup to the simulated survey, I have observed ten galaxy clusters selected from the SDSS DR8 and the \emph{Chandra-XMM} X-ray Cluster Survey \citep{Mehrtens2012} at $z=0.2-0.3$. with the Mitchell IFU Spectrograph (formerly VIRUS-P; \citealt{Hill2008a}) at McDonald Observatory. I have measured spectroscopic redshifts and line-of-sight velocities of the galaxies in and around each cluster, derived a line-of-sight velocity dispersion, and inferred a dynamical mass for each cluster. Using the mass probability functions described above, I am able to update these cluster masses and compare them to existing literature estimates, or to the masses estimated from other observables. The goal is to estimate the ability of future, blind, spectroscopic surveys to improve the accuracy of the observable-mass relationship, and to help calibrate future large-area sky survey mass estimates, where extensive spectroscopic follow up is impractical. This work is expected to be completed in the spring, 2016.\\
+
+\noindent \textbf{Impact of Galaxy Bulges on Stellar Populations at $z\sim2$:} The mechanism by which galaxies in the early universe transition from blue, star-forming disks to quiescent, bulge-dominated galaxies continues to be an active area of research. To investigate possible causes, I used data from the Cosmic Assembly Near-infrared Deep Extragalactic Legacy Survey (CANDELS; \citealt{Koekemoer2011, Grogin2011}) to study how the spatial variation in the stellar populations of galaxies relate to their morphologies and stellar masses at $1.5 < z < 3.5$ \citep{Boada2015}. I measured the variations in stellar population age (and dust attenuation) using the Internal Color Dispersion (ICD) statistic and found the ICD is related to stellar mass and galaxy morphology. Specifically, I found that galaxies with stellar masses $10<\mathrm{Log~M}/\Msol<11$ and disk-dominated morphologies have a large variation in their stellar populations, and that as the stellar mass increases \emph{or} the galaxy becomes more bulge-dominated the amount of this stellar diversity decreases.
+
+\section{\sc Direction of Future Research}
+\noindent \textbf{Introduction:} In the coming years, many large surveys, over a wide range of wavelengths, will improve our ability to use galaxy clusters to determine cosmological parameters by adding additional statistical depth to our current data sets. It is anticipated that upon their completion the South Pole Telescope and the Atacama Cosmology Telescope will find approximately one thousand clusters using Sunyaev--Zel’dovich Effect (SZE) observations. Attempts are already underway to calibrate the SZE derived masses using subsamples of clusters with dynamical mass estimates or X-ray temperature measurements \citep{Sifon2013, Bocquet2015}. The eROSITA telescope onboard the \emph{Spektrum-Roentgen-Gamma} mission will perform an all--sky, X-ray survey and detect an estimated 50,000 or more clusters. Large optical/IR surveys such as DES and LSST, PanSTARRS, the Hyper-Suprime Camera survey, the \emph{Euclid} mission and WFIRST-AFTA will survey enormous portions of the sky and identify vast numbers of clusters at redshifts as high as $z\sim1$ using optical selection methods \citeeg{Rykoff2012, Rozo2015a}.
+
+However, as many of these surveys are optimized to address a broad range of science goals, they are very rarely the best choice for any single science question. Therefore, advancement in data science techniques which are designed to overcome the limitations of the observations are required to answer specific science questions. For my future research, I am interested in using large-area sky surveys to improve the mass estimates of low mass clusters and to search for similar mass clusters at high-$z$ which can aid in the determination of cosmological parameters. Below, I identify three areas where I can make improvements to existing techniques and algorithms. (1) Current external mass calibrators will need to be extended to lower cluster masses to accurately calibrate the optical richness--mass relation and improve its ability to recover the low mass end of the halo mass function (HMF). (2) Correctly identifying the cluster's center without a clear central galaxy can improve the accuracy of the optical--mass scaling relations. (3) The algorithms used to optically identify clusters assume specific things about the population of cluster galaxies, often a well-defined red sequence. This can be problematic for low mass or high-$z$ cluster searches.\\
+
+\noindent \textbf{Calibration of the observable--Cluster Halo Mass Relation:} Large-scale optical surveys (e.g., DES and LSST) expect to detect hundreds of thousands of galaxy clusters at $z < 1$. A major challenge for these surveys is relating a cluster observable to the total dark-matter mass. One promising mass estimator is the optical richness, $\lambda$, the weighted number of galaxies within a scale aperture \citeeg{Rozo2011}. Figure~\ref{fig:massrichness} shows that the richness correlates strongly with cluster mass on average \citep{Rozo2010}, but the absolute mass scale of the optical richness mass estimator and the scatter in cluster mass at fixed optical richness are imprecisely known \citep{Rykoff2012}. These systematics remain the major source of uncertainty in deriving cosmological constraints from cluster abundances and must be measured using independent methods to realize the full potential of these surveys.
+
+\begin{wrapfigure}[23]{r}{0.4\textwidth}
+	\vspace*{-.75cm}
+	\centering
+	\includegraphics[clip=true, width=0.4\textwidth]{figures/massrichness.pdf}
+	\vspace*{-0.75cm}
+	\caption{The relation between the mean Richness and the mean cluster mass derived from stacked weak lensing measurements. The number of clusters in each stack are given above each data point. There is a strong correlation between richness and cluster mass, however, because the data are stacked, the absolute mass scale and scatter in mass at fixed richness are imprecisely known.}
+	\label{fig:massrichness}
+\end{wrapfigure}
+
+Applying my current work to a large photometric survey such as those mentioned above is the logical next step. For example, the HETDEX observations overlap with the DES area and SDSS Stripe 82 which provides a wealth of external data. Using preexisting datasets, the observations from HETDEX, or through dedicated followup spectroscopic observations, I will be able to measure the absolute mass scale of the richness estimator and measure the scatter of the richness-mass relation, $\sigma_{M|\lambda}$. An accurate measure of this scatter can lead to a decrease on the error bar on cosmological measures ($\sigma_8$ and $\Omega_M$) by as much as 50\% \citep{Rozo2010}. An absolute calibration of the richness-mass relation will provide a much needed tool for future imaging surveys which will identify clusters to $z=1$ and beyond.\\
+
+\noindent \textbf{Investigation of Cluster Mis-centering:} Misidentification of the cluster center (due to the mass distribution not being directly observable) can add significant error to the estimate of its mass. Fortunately, hierarchical growth suggests the brightest cluster galaxy (BCG) should be located at the center of the cluster's potential well. Unfortunately, this is not always the case \citeeg{Skibba2011}. When there is no clear central galaxy or the brightest (most massive) galaxy is difficult to identify, the centroid of the hot intracluster medium or a weighted centroid of the member galaxy positions \citeeg{George2012} can be used.
+
+Many optical, photometry-based cluster finding algorithms (\eg, redMapper; \citealt{Rykoff2014}) assume a massive cD galaxy is present in each cluster, which gives a success rate of approximately 85\% and is described as the ``least bad'' option for identifying the cluster center. The remaining 15\% of clusters often lack a defined center because the cluster's BCG does not match the expected color of a massive, elliptical galaxy. Specifically, cool-core clusters can have blue, star-forming central galaxies, confusing the cluster center determination.
+
+Star-forming central galaxies are most common in clusters at the lowest end of the halo mass function, which coincide with the majority of clusters in the universe, or in clusters with increasing redshift (the Butcher-Oemler effect). To help correct this issue, I am interested in using targeted spectroscopic observations to identify the center of motion through the observed dynamics of the member galaxies. This is insensitive to the type of central galaxy and could provide additional clues to  optically select central galaxies which do not match the predicted color. A second method is to use a targeted campaign or large archival dataset of \emph{XMM-Newton} observations of low richness clusters to place further constrains on the center. Given a large enough sample, a statistical approach will be very powerful.\\
+
+\noindent \textbf{Search for Clusters Beyond $z=1$:} The identification of galaxy clusters in the low-$z$ universe through optical imaging often relies on a well defined red sequence of cluster galaxies. Beyond $z=1$ the this becomes increasingly hard due to the depth required and the increasing lack of well defined red sequence. Therefore, new methods to search for and identify clusters in the early universe with optical/NIR imaging must be adopted.
+
+\begin{wrapfigure}[18]{r}{0.4\textwidth}
+	\vspace*{-1.cm}
+	\centering
+	\includegraphics[clip=true, width=0.4\textwidth]{figures/dehghan.pdf}
+	\vspace*{-0.75cm}
+	\caption{Potential structures detected at $0.65 < z < 0.7$ in the ECDF-S. Colored points show potential clusters whereas black points show galaxies classified as noise.}
+	\label{fig: dehghan}
+\end{wrapfigure}
+
+The search for clusters in point data (\eg, RA, DEC, $z$) is not unique to astronomy and, as such, many methods (k-means, mixture models, etc.) have been developed to tackle the problem. \cite{Dehghan2014} used a data agnostic machine learning algorithm, the Density-Based Spatial Clustering of Applications with Noise (DBSCAN; \citealt{Ester1996}), to search for clusters, group, and filaments in the Extended Chandra Deep Field South (ECDF-S), see Figure~\ref{fig: dehghan}. They successfully identified structures at $z<1$ using a ground based spectroscopic survey and the MUSYC photometric catalog. Improvements could be made immediately by using modern clustering algorithms, such as Ordering Points To Identify the Clustering Structure (OPTICS; \citealt{Ankerst1999}) or a hierarchical version of DBSCAN (HDBSCAN; \citealt{Campello2013}), both of which are designed to address the weaknesses of DBSCAN.
+
+To reach beyond $z=1$, I will make use of deep imaging data of five fields taken as part of CANDELS with a combined area of approximately 800 \arcminsq. I will use machine learning techniques, mature photometric catalogs, and a wealth of auxiliary data to search for and classify structures as clusters and filaments. I am also interested in revisiting my previous CANDELS work \citep{Boada2015} using the environmental information provided by this structure search to investigate how those results might change. This clustering search can also be extended to the large sky-area of PanSTARRS to search for dwarf galaxies or other stellar associations and will eventually be useful to the large area survey of WFIRST-AFTA. This study will provide important advances in the systematic search for large structures above $z=1$, aid in the development and application of data agnostic machine learning to astronomy, provide improved cluster detection at all redshifts, and suggest followup targets requiring JWST.
+
+\section{\sc References}
+\begin{multicols}{2}
+{\small
+\noindent Acquaviva \etal\ 2014, PIAU, 10, 365\\
+Ankerst \etal\ 1999, ACM Sigmod Record, 49\\
+Boada et al. 2015, ApJ, 803, 104\\
+Bocquet et al. 2015, ApJ, 799, 214\\
+Campello \etal\ 2013 in Lec. Notes in Comp. Sci., 7819, 160–-172\\
+Dehghan \& Johnston-Hollitt 2014, AJ, 147, 52\\
+Ester \etal\ 1996, in Sec. Int. Conf. on Knowledge Discovery and Data Mining, 226--231\\
+George et al. 2012, ApJ, 757, 2\\
+Grogin et al. 2011, ApJS, 197, 35\\
+Hill et al. 2008a, Proc. SPIE 7014, 701470--15\\
+Hill et al. 2008b, Panoramic Views of Galaxy Formation and Evolution ASP Conference Series, 399\\
+Hill et al. 2012, Proc. SPIE 8446, 84460N\\
+Koekemoer et al. 2011, ApJS, 197, 36\\
+Mehrtens et al. 2012, MNRAS, 423, 1024\\
+Planck Collaboration 2013, A\&A, 571, 19 \\
+Rozo \etal\ 2015, MNRAS, 453, 38\\
+Rozo \etal\ 2011, ApJ, 735, 118\\
+Rozo \etal\ 2010, ApJ, 708, 645\\
+Rykoff et al. 2012, ApJ, 746, 178 \\
+Rykoff et al. 2014, ApJ, 785, 104 \\
+Sehgal et al. 2011, ApJ, 732, 44\\
+Sif\'{o}n et al. 2013, AJ, 772, 25\\
+Skibba et al. 2011, MNRAS, 410, 417
+}
+\end{multicols}
+
+\newpage
+\renewcommand{\section}[2]{}%
+\begin{multicols}{2}
+   \small
+   \renewcommand{\refname}{ \vspace{-\baselineskip}\vspace{-1.1mm} }
+   \bibliography{library}
+ \end{multicols}
+\end{resume}
+\end{document}

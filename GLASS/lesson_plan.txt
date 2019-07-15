@@ -1,0 +1,126 @@
+                                                                     
+                                                                     
+                                                                     
+                                             
+
+THIS IS THE SESSION WHERE I'LL BE TEACHING PYTHON BASICS...
+
+
+
+(0) Make sure that IPython is installed... should be included with scisoft
+Check that matplotlib is installed
+
+
+other downloadable modules...
+pyfits --- for .fits manipulation
+astLib --- for some astronomy calculations
+
+
+
+
+(1) The basics
+
+In [1]: 2 + 2
+Out[1]: 4
+
+In [2]: x = 2 + 2
+
+In [3]: x**3
+Out[3]: 64
+
+In [4]: y = _
+
+In [5]: y
+Out[5]: 64
+
+In [6]: import math
+
+In [7]: print math.log10( 50 )
+------> print(math.log10( 50 ))
+1.69897000434
+
+In [8]: x = range(20)
+
+
+
+Do loops
+> FOR
+> IF
+> WHILE
+> TRY/EXCEPT
+
+
+
+Write a script and execute with %run
+
+
+glob
+str.replace()
+
+
+
+
+(2) Plotting a spectrum
+
+http://people.physics.tamu.edu/tomczak/downloads/spectrum_Ne.txt
+
+data = pl.loadtxt()
+
+data
+
+len(data)
+
+pl.plot( data[:,0] , data[:,1] )
+pl.loglog()
+pl.xscale('log')
+pl.xlabel()
+
+
+data2 = dat[1500:1600]
+pl.scatter( data[:,0] , data[:,1] )
+pl.axhline( pl.average(data2[:,1]), color='r', ls='--' )
+
+
+
+
+
+
+(3) Subprocess
+
+import subprocess
+import subprocess as sp
+
+
+sp.call(  [ "ls" ] , shell=True  )
+sp.call(  [ "sex star.fits -c default.sex" ] , shell=True  )
+!ls
+
+
+
+
+
+(4) Python + IRAF = Pyraf
+
+import iraf
+
+execfile('file.py')
+
+
+--> imstat star.fits
+#               IMAGE      NPIX      MEAN    STDDEV       MIN       MAX
+            star.fits      2500     21.47      8.07     3.489     88.54
+--> import iraf
+--> iraf.imstat('star.fits')
+#               IMAGE      NPIX      MEAN    STDDEV       MIN       MAX
+            star.fits      2500     21.47      8.07     3.489     88.54
+--> 
+
+
+
+
+
+
+(5) Teach about classes
+
+class ...
+      def __init__( self, ... )

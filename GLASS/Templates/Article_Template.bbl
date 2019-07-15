@@ -1,0 +1,24 @@
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Alcorn {et~al.}(2016)Alcorn, Tran, Kacprzak, Nanayakkara, Straatman,
+  Yuan, Allen, Cowley, Dav{\'{e}}, Glazebrook, Kewley, Labb{\'{e}}, Quadri,
+  Spitler, \& Tomczak}]{Alcorn2016}
+Alcorn, L.~Y., Tran, K.-V.~H., Kacprzak, G.~G., {et~al.} 2016, 6
+
+\bibitem[{Forrest {et~al.}(2016)Forrest, Tran, Tomczak, Broussard, Labb{\'{e}},
+  Papovich, Kriek, Allen, Cowley, Dickinson, Glazebrook, van Houdt, Inami,
+  Kacprzak, Kawinwanichakij, Kelson, McCarthy, Monson, Morrison, Nanayakkara,
+  Persson, Quadri, Spitler, Straatman, \& Tilvi}]{Forrest2016}
+Forrest, B., Tran, K.-V.~H., Tomczak, A.~R., {et~al.} 2016, The Astrophysical
+  Journal, 818, L26
+
+\bibitem[{Straatman {et~al.}(2016)Straatman, Spitler, Quadri, Labb{\'{e}},
+  Glazebrook, Persson, Papovich, Tran, Brammer, Cowley, Tomczak, Nanayakkara,
+  Alcorn, Allen, Broussard, van Dokkum, Forrest, van Houdt, Kacprzak,
+  Kawinwanichakij, Kelson, Lee, McCarthy, Mehrtens, Monson, Murphy, Rees,
+  Tilvi, \& Whitaker}]{Straatman2016}
+Straatman, C. M.~S., Spitler, L.~R., Quadri, R.~F., {et~al.} 2016, The
+  Astrophysical Journal, 830, 51
+
+\end{thebibliography}

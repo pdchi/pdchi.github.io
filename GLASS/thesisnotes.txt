@@ -1,0 +1,89 @@
+-------------------
+GLASS - 2.12.16
+  Jimmy
+  Preparing for your Ph.D. defense and submitting your thesis
+-------------------
+
+
+Thesis Corrections
+-----
+  OGAPS is mostly worried about formatting of abstract/introduction
+  Issues with OGAPS template:
+    Spacing issues with template (auto-generated list)
+    aasmacros
+    Use 3-part table instead of deluxetable (not supported)
+      or use sample table formatting
+    See GLASS webpage for improved template!
+  Hold onto copyright permissions from submissions to journals
+
+Thesis timing requirements are advisor-dependent (~2 weeks prior at least)
+Solid thesis draft sent to committee before defense -
+  then all forms can be completed at defense, no chasing down professors...
+  (Passed your defense form, Approved thesis form, Copyright form)
+
+
+Stay smart!
+-----
+  Mental health and physical health are important to maintain stress during crunch time.
+  Try to maintain your physical activity, even if it's just at a reduced level.
+  Mental health is just as important as physical health.
+  If your mental anguish is getting to the point that it is interfering with your work,
+    make an appointment to see a doctor at Beutel.
+  They can recommend coping mechanisms and prescribe any necessary medications to help
+    you manage the increased anxiety and depression you're likely to experience finishing
+    your PhD.  Don't wait until it's too late, get help managing your symptoms early as
+    the medication can take 2 or more weeks to reach full effect.
+
+  Staying ahead of deadlines also helps to reduce stress - have a plan, work the plan!
+
+
+
+
+Preparing for a Defense
+-----
+
+  Challenge: Out-Of-Dept. Committee Member, Dept. Members, other students all need to be 
+    able to follow you talk (various levels of knowledge).
+
+  If you're struggling to devise a format for your PhD defense slides, consider the
+    following suggestion:
+   Use the Introduction chapter of your dissertation to structure the introductory slides
+     to your talk.
+   Then pull the key figures from each of your published/submitted/in prep. papers to show
+     your results.
+   Finally, use the summary chapter of your dissertation to structure the final slides,
+     and for the conclusion slide, put up a one sentence summary of each paper/project.
+
+  Recommended not to use a laser pointer (disconnected from speaker)
+  Video on How to Give a Talk (see link on GLASS page)
+  Don't give a timed talk, give a complete, understandable talk
+    (that being said don't talk for 20min or 2hrs)
+  Lots of backup slides
+    Info from paper appendices
+    Any plots from papers not in slides
+    Any questions from master's defense you didn't understand
+
+  ~45 primary, 20 backup slides
+  Schedule a meeting with each committee member ~1 month ahead of time to learn what
+    their expectations are for your defense.
+
+  If you don't know the answer to a question:
+    Answer a different, related question
+    Ask for clarification
+    Use the board to work out your thoughts - professors may help you take smaller steps
+      to the final conclusion
+  Talk as long as possible about questions you know a lot about
+  
+ 
+Prelim
+-----
+  Write 3 page paper about what has been done, what you are doing, and plans for future
+    work before prelim - provide to committee members
+  OGS requires proposal re: prelim
+
+
+
+
+
+
+
